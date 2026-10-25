@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.web
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_JELLYFIN_URL=http://jellyfin:8096
+  jellyfin:
+    image: jellyfin/jellyfin
+    volumes:
+      - ./media:/media
+    ports:
+      - "8096:8096"
