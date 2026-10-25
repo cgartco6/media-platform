@@ -1,0 +1,20 @@
+:root {
+  --bg: #000000;
+  --text: #39ff14;          /* neon green */
+  --watched: #ff00aa;       /* neon pink */
+  --resume: #ffffff;        /* white */
+  --accent: #39ff14;
+}
+
+body, .background {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.watched, .played-indicator {
+  color: var(--watched) !important;
+}
+
+.resume, .continue-watching {
+  color: var(--resume) !important;
+}
